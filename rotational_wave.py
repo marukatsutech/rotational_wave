@@ -1,4 +1,4 @@
-""" Rotational wave  """
+""" Rotational wave """
 import numpy as np
 from matplotlib.figure import Figure
 import matplotlib.animation as animation
