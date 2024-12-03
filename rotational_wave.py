@@ -16,7 +16,7 @@ is_play = False
 """ Other parameters """
 number_of_phase_circles = 200
 step_distance = 1.
-step_phase = 0.1
+step_phase = 1.
 step_rotation_deg = 1.
 
 """ Create figure and axes """
