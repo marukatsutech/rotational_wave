@@ -56,7 +56,7 @@ class Counter:
     def __init__(self, is3d=None, ax=None, xy=None, z=None, label=""):
         self.is3d = is3d if is3d is not None else False
         self.ax = ax
-        self.x, self.y = xy
+        self.x, self.y = xy[0], xy[1]
         self.z = z if z is not None else 0
         self.label = label
 
@@ -65,7 +65,7 @@ class Counter:
         if not is3d:
             self.txt_step = self.ax.text(self.x, self.y, self.label + str(self.count))
         else:
-            self.txt_step = self.ax.text(self.x, self.y, self.z, self.label + str(self.count))
+            self.txt_step = self.ax.text2D(self.x, self.y, self.label + str(self.count))
             self.xz, self.yz, _ = proj3d.proj_transform(self.x, self.y, self.z, self.ax.get_proj())
             self.txt_step.set_position((self.xz, self.yz))
 
